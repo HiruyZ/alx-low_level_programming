@@ -9,7 +9,6 @@ void print_diagsums(int *a, int size)
 {
 	int x, sum_a = 0, sum_b = 0;
 
-	a = size - 1;
 	for (x = 0; x < size; x++)
 	{
 		sum_a = sum_a + a[x * size + x];
