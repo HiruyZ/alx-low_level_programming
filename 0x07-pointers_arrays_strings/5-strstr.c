@@ -4,40 +4,23 @@
  *@haystack: main string
  *@needle: check this string
  *
- * Return: substring found
+ * Return: 0 on success
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int count = 0, a = 0, i = 0, j = 0, y, x;
-	char *s;
+	for (; *haystack != '\0'; haystack++)
+	{
+		char *h = haystack;
+		char *n = needle;
 
-	while (needle[count] != '\0')
-	{
-		count++;
-	}
-	while (haystack[i] != '\0')
-	{
-		i++;
-			}
-	if (count == 0)
-		return (haystack);
-	while (haystack[j] != '\0')
-	{
-		if (haystack[j] == needle[0])
+		while (*h == *n && *n != '\0')
 		{
-			s = &haystack[j];
-			y = j;
-			a = 0;
-			for (x = 0; x < count; x++)
-			{
-				if (haystack[y] == needle[k])
-					a++;
-				l++;
-			}
+			h++;
+			n++;
 		}
-		if (a == count)
-			return (s);
-		j++;
+
+		if (*n == '\0')
+			return (haystack);
 	}
-	return ('\0');
+	return (0);
 }
