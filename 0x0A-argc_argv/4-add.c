@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		{
 			if (!(isdigit(argv[count][i])))
 			{
-				printf("Not a number\n");
+				printf("Error\n");
 				return (1);
 			}
 		}
